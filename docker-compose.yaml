@@ -6,8 +6,8 @@ services:
     ports:
       - '4000:4000'
     volumes:
-      - ./api:/app
-      - ./app/node_modules
+      - ./api:/app/api
+      - ./app/api/node_modules
 
   frontend:
     build: ./myblog
@@ -15,6 +15,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ./myblog:/app
-      - ./app/node_modules
+      - ./api:/app/frontend
+      - ./app/frontend/node_modules
     stdin_open: true
+    tty: true

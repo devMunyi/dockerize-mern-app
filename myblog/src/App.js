@@ -3,6 +3,8 @@ import './App.css';
 
 function App() {
   const [blogs, setBlogs] = useState([])
+
+  console.log(blogs);
   useEffect(() => {
     fetch('http://localhost:4000/')
       .then(res => res.json())
