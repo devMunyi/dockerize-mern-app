@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:18-alpine
 
 WORKDIR /app/frontend
 
@@ -11,4 +11,4 @@ COPY . .
 EXPOSE 3000
 # required for docker desktop port mapping
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
